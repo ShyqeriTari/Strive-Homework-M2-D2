@@ -50,6 +50,7 @@ footer{
     text-align: center;
 }
 
+
 #just-covers img{
     height: 100%;
     width: 100%;
@@ -84,11 +85,30 @@ footer{
     color: red;
 }
 
+#album-reviews > div{
+ 
+  height: 600px;
+  z-index: 10;
+  width: 400px;
+}
 
     </style>
 </head>
 
 <body>
+
+
+
+  <!-- 1) Create two inputs for picking up colors in the page, and a button with "Apply Colors" as text
+  2) Grab all li in the page from the DOM, and save them in a variable called "listItems"
+  3) Grab the inputs references via DOM manipulation and save them in variables
+  4) Create a function and attach it to the "Apply Colors" button click event
+  5) Cycle listItems inside the function. Verify that the function and the loop work by logging in the console 
+      each item from the loop every time the button gets clicked
+  6) Move the inputs references in the function. Use the first input value as background-color for the item, and the second one for the text color.
+
+  If you receive black as a color check where you have the inputs references.
+  You should now see the list-items color and background-color change at the click of the button.-->
 
 
     <!-- EXERCISE 2 
@@ -134,7 +154,7 @@ footer{
          <h1>Favourite albums</h1> 
 
 
-<div class="row  cols-xl-4 cols-lg-3 cols-md-3 cols-sm-2 cols-xs-2">
+<div class="row  cols-xl-4  cols-sm-3 cols-xs-2">
     <div class="col">
       <div class="card h-100">
         <img src="https://www.rollingstone.it/wp-content/uploads/2021/10/RHCP-2-Photo-Credit_-Clara-Balzary.jpg" class="card-img-top " alt="...">
@@ -204,7 +224,7 @@ footer{
 <h1>Album reviews</h1>
 
 <div class="col">
-    <div class="card h-100">
+    <div class="card">
       <img src="https://fanart.tv/fanart/music/a39acc4a-985e-4173-a9ed-f325f2d3bc1c/albumcover/neon-future-ii-55ba9d64f3952.jpg" class="card-img-top " alt="...">
       <div class="card-body">
         <h5 class="card-title">WASTE IT ON ME - Steve Aoki</h5>
@@ -413,6 +433,37 @@ footer{
 
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+<script>
+
+
+/* 1) Create two inputs for picking up colors in the page, and a button with "Apply Colors" as text
+  2) Grab all li in the page from the DOM, and save them in a variable called "listItems"
+  3) Grab the inputs references via DOM manipulation and save them in variables
+  4) Create a function and attach it to the "Apply Colors" button click event
+  5) Cycle listItems inside the function. Verify that the function and the loop work by logging in the console 
+      each item from the loop every time the button gets clicked
+  6) Move the inputs references in the function. Use the first input value as background-color for the item, and the second one for the text color.
+
+  If you receive black as a color check where you have the inputs references.
+  You should now see the list-items color and background-color change at the click of the button.*/
+
+  const inputsDiv = document.createElement("div")
+  let firstInput = document.createElement("input")
+  let secondInput = document.createElement("input")
+  let button = document.createElement("button")
+  button.setAttribute("Apply colors")
+  inputsDiv.appendChild(firstInput, secondInput, button)
+  console.log(inputsDiv)
+
+
+
+
+
+
+
+
+
+</script>
 
 </body>
 </html>
